@@ -1,7 +1,5 @@
 import allure
 
-from helpers.data.all_links import AllLinks
-
 from selene import browser, be, have
 from selene.core.conditions import Condition as EC
 
