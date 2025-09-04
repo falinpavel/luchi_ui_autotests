@@ -1,15 +1,15 @@
 import pytest
 
 from helpers.application_manager.application_manager import luchi_app
-from utils.allure_custom_marks import allure_class_mark, allure_func_mark
+from utils.allure_custom_marks import allure_high_level_marks, allure_mid_level_marks
 
 
-@allure_class_mark(epic="Хедер", feature="Навигация через верхнее меню")
+@allure_high_level_marks(epic="Хедер", feature="Навигация через верхнее меню")
 class TestNavigateHeaderMenu:
 
     @pytest.mark.ui
-    @allure_func_mark(story="Пользователь может навигировать по сайту через верхнее меню", testcase_id="Luchi-UI-001",
-                      title="Навигация по сайту через верхнее меню", label="WEB", owner="AQA Falin Pavel")
+    @allure_mid_level_marks(story="Пользователь может навигировать по сайту через верхнее меню", testcase_id="Luchi-UI-001",
+                            title="Навигация по сайту через верхнее меню", label="WEB", owner="AQA Falin Pavel")
     def test_navigate_all_links_in_header_menu(self):
         luchi_app.home_page \
             .open_home_page() \

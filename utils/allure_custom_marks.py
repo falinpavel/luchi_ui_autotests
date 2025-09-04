@@ -2,7 +2,7 @@ import allure
 from functools import wraps
 
 
-def allure_class_mark(epic: str, feature: str):
+def allure_high_level_marks(epic: str, feature: str):
     def class_decorator(cls):
         cls = allure.epic(epic)(cls)
         cls = allure.feature(feature)(cls)
@@ -10,7 +10,7 @@ def allure_class_mark(epic: str, feature: str):
     return class_decorator
 
 
-def allure_func_mark(story: str, testcase_id: str, title: str, label: str, owner: str):
+def allure_mid_level_marks(story: str, testcase_id: str, title: str, label: str, owner: str):
     def func_decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
