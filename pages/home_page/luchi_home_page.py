@@ -27,7 +27,7 @@ class LuchiHomePage:
     @allure.step("Принятие cookies")
     def accept_cookies(self) -> "LuchiHomePage":
         with allure.step('Принятие cookies нажатием на плашке кнопки "Хорошо"'):
-            browser.element("""//span[@title="Хорошо"]""").should(
+            browser.element("""//span[@title="Хорошо"]""").with_(timeout=browser.config.timeout * 2).should(
                 EC.by_and(be.clickable, have.text("Хорошо"))).hover().click()
         return self
 
