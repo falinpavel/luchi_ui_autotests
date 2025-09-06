@@ -38,30 +38,37 @@ class LuchiCatalogPage:
         with allure.step(f'Проверка что в табе {category_name} отображены все обязательные услуги {str(services)}'):
             if category_name == "Все":
                 for service in services:
-                    browser.element(f"""(//div[@role="tabpanel"])[1]//span[contains(text(), '{service}')]""") \
-                        .perform(command.js.scroll_into_view).should(EC.by_and(be.visible))
+                    with allure.step(f'Услуга {service}'):
+                        browser.element(f"""(//div[@role="tabpanel"])[1]//span[contains(text(), '{service}')]""") \
+                            .perform(command.js.scroll_into_view).should(EC.by_and(be.visible))
             elif category_name == "Страхование":
                 for service in services:
-                    browser.element(f"""(//div[@role="tabpanel"])[2]//span[contains(text(), '{service}')]""") \
-                        .perform(command.js.scroll_into_view).should(EC.by_and(be.visible, have.text(service)))
+                    with allure.step(f'Услуга {service}'):
+                        browser.element(f"""(//div[@role="tabpanel"])[2]//span[contains(text(), '{service}')]""") \
+                            .perform(command.js.scroll_into_view).should(EC.by_and(be.visible, have.text(service)))
             elif category_name == "Здоровье":
                 for service in services:
-                    browser.element(f"""(//div[@role="tabpanel"])[3]//span[contains(text(), '{service}')]""") \
-                        .perform(command.js.scroll_into_view).should(EC.by_and(be.visible))
+                    with allure.step(f'Услуга {service}'):
+                        browser.element(f"""(//div[@role="tabpanel"])[3]//span[contains(text(), '{service}')]""") \
+                            .perform(command.js.scroll_into_view).should(EC.by_and(be.visible))
             elif category_name == "ДМС":
                 for service in services:
-                    browser.element(f"""(//div[@role="tabpanel"])[4]//span[contains(text(), '{service}')]""") \
-                        .perform(command.js.scroll_into_view).should(EC.by_and(be.visible))
+                    with allure.step(f'Услуга {service}'):
+                        browser.element(f"""(//div[@role="tabpanel"])[4]//span[contains(text(), '{service}')]""") \
+                            .perform(command.js.scroll_into_view).should(EC.by_and(be.visible))
             elif category_name == "Забота о любимых":
                 for service in services:
-                    browser.element(f"""(//div[@role="tabpanel"])[5]//span[contains(text(), '{service}')]""") \
-                        .perform(command.js.scroll_into_view).should(EC.by_and(be.visible))
+                    with allure.step(f'Услуга {service}'):
+                        browser.element(f"""(//div[@role="tabpanel"])[5]//span[contains(text(), '{service}')]""") \
+                            .perform(command.js.scroll_into_view).should(EC.by_and(be.visible))
             elif category_name == "Дом":
                 for service in services:
-                    browser.element(f"""(//div[@role="tabpanel"])[6]//span[contains(text(), '{service}')]""") \
-                        .perform(command.js.scroll_into_view).should(EC.by_and(be.visible))
+                    with allure.step(f'Услуга {service}'):
+                        browser.element(f"""(//div[@role="tabpanel"])[6]//span[contains(text(), '{service}')]""") \
+                            .perform(command.js.scroll_into_view).should(EC.by_and(be.visible))
             elif category_name == "Ипотека":
                 for service in services:
-                    browser.element(f"""(//div[@role="tabpanel"])[7]//span[contains(text(), '{service}')]""") \
-                        .perform(command.js.scroll_into_view).should(EC.by_and(be.visible))
+                    with allure.step(f'Услуга {service}'):
+                        browser.element(f"""(//div[@role="tabpanel"])[7]//span[contains(text(), '{service}')]""") \
+                            .perform(command.js.scroll_into_view).should(EC.by_and(be.visible))
         return self
