@@ -5,3 +5,26 @@ markers = [
     "regression: Помечает регрессионные тесты",
     "smoke: Помечает smoke тесты"
 ]
+[tool.poetry]
+name = "luchi-ui-autotests"
+version = "0.1.0"
+description = ""
+authors = ["falinpavel-macbook <aloverapf@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+poetry-core = "^2.1.3"
+allure-pytest = "2.15.0"
+allure-python-commons = "2.15.0"
+pytest = "8.4.2"
+python-dotenv = "1.1.1"
+selene = "2.0.0rc9"
+selenium = "4.35.0"
+pytest-xdist = "3.8.0"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
