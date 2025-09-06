@@ -19,7 +19,7 @@
 ## <img width="3%" title="pycharm" src="resources/images/logo/pycharm.png"> Запуск тестов локально:
 
 1) Клонировать репозиторий: git clone git@github.com:falinpavel/luchi_ui_autotests.git
-2) Установить зависимости: pip install -r requirements.txt
+2) Установить зависимости (в проекте используется poetry): poetry init -> poetry install
 3) Запуск тестов с генерацией отчетов Allure: pytest (все параметры запуска зашиты в pyproject.toml)
 4) Просмотр отчета Allure (если установлен Allure CLI): allure serve reports/allure-results
 
