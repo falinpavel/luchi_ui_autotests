@@ -10,7 +10,7 @@ markers = [
 name = "luchi-ui-autotests"
 version = "0.1.0"
 description = ""
-authors = ["falinpavel-macbook <aloverapf@yandex.ru>"]
+authors = ["falinpavel"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
